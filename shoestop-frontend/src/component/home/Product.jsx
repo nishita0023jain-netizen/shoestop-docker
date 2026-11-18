@@ -11,7 +11,8 @@ const Product = () => {
     const { token } = useContext( productContext )
 
     const fetchData = async () => {
-        await axios.get("http://localhost:5000/api/getproducts")
+        await axios.get("https://shoestop-docker.onrender.com
+/api/getproducts")
             .then(res => setProducts(res.data))
     }
 
@@ -24,7 +25,8 @@ const Product = () => {
             Authorization: `Bearer ${token}`,
           };
         console.log(image,title,company,price);
-        axios.post('http://localhost:5000/api/addfav', {
+        axios.post('https://shoestop-docker.onrender.com
+/api/addfav', {
             image,title,company,price
           },{
             headers
@@ -48,7 +50,8 @@ const Product = () => {
     const addtoCart = (image,title,company,price) =>{
         console.log(token);
         
-        axios.post('http://localhost:5000/api/addcart', {
+        axios.post('https://shoestop-docker.onrender.com
+/api/addcart', {
             image,title,company,price
           },{
             headers : {
