@@ -6,7 +6,7 @@ import axios from 'axios'
 
 const Fav = () => {
 
-  const url = "https://shoestop-docker://api/addfav"
+  const url = "https://shoestop-docker.onrender.com/api/addfav"
 
   const { favProList,setFavProductList, token } = useContext(productContext)
 
@@ -17,7 +17,7 @@ const Fav = () => {
           Authorization: `Bearer ${token}`,
         };
         
-        const response = await axios.get('https://shoestop-docker://api/addfav', { headers });
+        const response = await axios.get('https://shoestop-docker.onrender.com/api/addfav', { headers });
         setFavProductList(response.data);
       }
     } catch (error) {

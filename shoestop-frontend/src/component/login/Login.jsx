@@ -10,7 +10,7 @@ const Login = () => {
     const [email, setMail] = useState('')
     const [password, setPassword] = useState('')
   
-    const url = "https://shoestop-docker://login"
+    const url = "https://shoestop-docker.onrender.com/login"
  
     const changeMailHandler = (e) => {
         setMail(e.target.value)
