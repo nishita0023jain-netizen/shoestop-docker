@@ -11,7 +11,7 @@ const Signup = () => {
   const [email, setMail] = useState('')
   const [password, setPassword] = useState('')
 
-  const url = "https://://onrender.comsignup"
+  const url = "https://shoestop-docker://signup"
 
   const changeNameHandler = (e) => {
       setName(e.target.value)
