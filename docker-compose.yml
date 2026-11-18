@@ -1,0 +1,18 @@
+services:
+  backend:
+    build: ./shoestop-backend
+    container_name: shoestop-backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./shoestop-backend/.env
+    restart: always
+
+  frontend:
+    build: ./shoestop-frontend
+    container_name: shoestop-frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    restart: always
